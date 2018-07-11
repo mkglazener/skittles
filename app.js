@@ -1,3 +1,7 @@
-/**
- * Here you can put your custom JavaScript
- */
+$(document).ready(function () {
+
+  $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+
+});

@@ -27,12 +27,12 @@ a:focus {
 }
 
 #sidebar .sidebar-header {
-  padding: 20px;
+  padding: 60px;
   background: #1C1063;
 }
 
 #sidebar ul.components {
-  padding: 40px 10px;
+  padding: 20px 10px;
   border-bottom: 1px solid #1C1063;
 }
 
@@ -60,7 +60,7 @@ a[aria-expanded="true"] {
 
 ul ul a {
   font-size: 0.9em !important;
-  padding-left: 30px !important;
+  padding-left: 60px !important;
   background: #1C1063;
 }
 
@@ -121,9 +121,6 @@ ul ul a {
 }
 
 @media (max-width: 768px) {
-  /* 80px and its content aligned to centre. Pushing it off the screen with the
-     negative left margin
-  */
   #sidebar.active {
     min-width: 80px;
     max-width: 80px;
@@ -208,10 +205,23 @@ h3 {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .containers {
   position: relative;
 }
 
-p{
+p {
   font-size: 10px;
+}
+
+.card-headers {
+  background-color: navy;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card-headers:hover {
+  background-color: orange;
+  text-decoration: none;
+  transition: all 0.3s;
 }

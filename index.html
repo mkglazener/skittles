@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -33,6 +32,7 @@
             });
         });
     </script>
+    <script src="app.js"></script>
 
 
     <!-- Bootstrap CSS CDN -->
@@ -46,12 +46,6 @@
         crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
-
-</head>
-
-<body>
-
-
     <div id="content">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -79,6 +73,7 @@
                 </div>
             </div>
         </nav>
+
     </div>
     </div>
 
@@ -114,6 +109,35 @@
                         <i class="fas fa-phone"></i>
                         Contacts
                     </a>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Open modal
+                    </button>
+
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Modal Heading</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    Modal body..
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                     <a href="#">
                         <i class="fas fa-question"></i>
                         FAQ
@@ -132,24 +156,22 @@
 
         </nav>
 
+
         <!-- Page Content  -->
 
+</head>
 
-
-</body>
-<div class="containerall">
-
-
+<body>
+    <!--/left accord-->
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-6">
+
             <div class="card">
                 <img src="images/pexels-photobw.jpeg" alt="Norway" style="width:100%;">
             </div>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-10">
+
+
             <div class="card">
                 <div class="card-header">
                     <i class="fa fa-question-circle-o"></i>HAVE QUESTIONS</div>
@@ -159,10 +181,8 @@
                     <p>Phone.</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-10">
+
+
             <div class="card">
                 <div class="card-header">Urgent or Confidential Needs</div>
                 <div class="card-body">Content
@@ -171,67 +191,199 @@
                     <p>Phone.</p>
                 </div>
             </div>
+
+        </div>
+        <!--/Middle accord end-->
+        <!--/right column-->
+        <div class="col-md-6">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <i class="fa fa-question-circle-o"></i>Need to find a Specialist
+
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                <a href="https://www.google.com/">Benefits</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
-</div>
-<div class="col-md-4">
-    <div id="accordion">
+    <div class="col-md-4">
         <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Front Office
-                    </button>
-                </h5>
-            </div>
+            <div class="card-header">
+                <i class="fa fa-question-circle-o"></i>HAVE QUESTIONS</div>
+            <div class="card-body">
+                <h3>Select Section</h3>
+                <div class="accordion accordion-3 z-depth-1-half" id="accordionEx1" role="tablist" aria-multiselectable="true">
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    Hi
+
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-headers" role="tab" id="heading4">
+                            <a data-toggle="collapse" data-parent="#accordionEx1" href="#collapse4" aria-expanded="true" aria-controls="collapse4"> Additional Questions
+                                <h3 class="mb-0 mt-3 red-text">
+                                    Additional Questions
+                                    <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                                </h3>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4" data-parent="#accordionEx1">
+                            <div class="card-body pt-0">
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>Lastname</th>
+                                        <th>Age</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Jill</td>
+                                        <td>Smith</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eve</td>
+                                        <td>Jackson</td>
+                                        <td>94</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>80</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion card -->
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-headers" role="tab">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                <h3 class="mb-0 mt-3 red-text">
+                                    Front Office
+                                    <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                                </h3>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5" data-parent="#accordionEx1">
+                            <div class="card-body pt-0">
+                                <p>As is.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="card">
+
+                            <!-- Card header -->
+                            <div class="card-headers" role="tab">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                    <h3 class="mb-0 mt-3 red-text">
+                                        Diversity inclusion
+                                        <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                                    </h3>
+                                </a>
+                            </div>
+
+                            <!-- Card body -->
+                            <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx1">
+                                <div class="card-body pt-0">
+                                    <p>sup
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion card -->
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Diversity.Inclusion
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                    Hi
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Test
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    sup
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10">
+                <!-- Accordion card -->
+
+                <!-- Accordion card -->
                 <div class="card">
-                    <img src="images/pexels-photobw.jpeg" alt="Norway" style="width:100%;">
+
+                    <!-- Card header -->
+                    <div class="card-headers" role="tab">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            <h3 class="mb-0 mt-3 red-text">
+                                EMPLOYEE DEVELOPMENT
+                                <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx1">
+                        <div class="card-body pt-0">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                                heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
+                <!-- Accordion card -->
             </div>
+
+            <!--/.Accordion wrapper-->
+
         </div>
-    </div>saa
-</div>
-</div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-3">s</div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+</body>
 </div>
 
+
+
+</div>
+</div>
 </div>
 
 </div>

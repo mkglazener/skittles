@@ -5,8 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <script src="app.js"></script>
+
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
@@ -31,7 +58,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Page</a>
+                            <a class="nav-link" href="#">Hi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Page</a>
@@ -46,6 +73,7 @@
                 </div>
             </div>
         </nav>
+
     </div>
     </div>
 
@@ -59,52 +87,83 @@
 
             <ul class="list-unstyled components">
 
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-                <a href="#">
-                        <i class="fas fa-user-circle"></i>
-                        About Me
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-laptop"></i>
-                        Self Service
-                    </a>
-
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-briefcase"></i>
-                        Careers
-                    </a>
-
-
                 <li>
-                    
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
                     <a href="#">
                         <i class="fas fa-user-circle"></i>
                         About Me
                     </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#">
                         <i class="fas fa-laptop"></i>
                         Self Service
                     </a>
-
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#">
                         <i class="fas fa-briefcase"></i>
                         Careers
                     </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                         <i class="fas fa-phone"></i>
                         Contacts
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    </button>
+
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Modal Heading</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+
+                                    <div class="container py-3">
+                                        <div class="card">
+                                            <div class="row ">
+                                                <div class="col-md-4">
+                                                    <img src="images/contacts2.jpg" class="w-100">
+                                                </div>
+
+
+                                                Contact the team.
+
+                                                <a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                                                <br />
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
                         <i class="fas fa-question"></i>
                         FAQ
                     </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#">
                         <i class="fas fa-comment"></i>
                         Feedback
                     </a>
+
+
                     <ul class="collapse list-unstyled" id="pageSubmenu">
 
                     </ul>
@@ -113,46 +172,238 @@
 
         </nav>
 
+
         <!-- Page Content  -->
 
-
-
-    </div>
 </head>
 
 <body>
+    <!--/left accord-->
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="card">
+                <img src="images/pexels-photobw.jpeg" alt="Norway" style="width:100%;">
+            </div>
 
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
-    
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-question-circle-o"></i>HAVE QUESTIONS</div>
+                <div class="card-body">
+                    <h3>Contact the Human ResourcesDivision Call Center Below</h3>
+                    <p>Hours of Operation</p>
+                    <p>Phone.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">Urgent or Confidential Needs</div>
+                <div class="card-body">Content
+                    <h3>Contact the Human ResourcesDivision Call Center Below</h3>
+                    <p>Hours of Operation</p>
+                    <p>Phone.</p>
+                </div>
+            </div>
+
+        </div>
+        <!--/Middle accord end-->
+        <!--/right column-->
+        <div class="col-md-6">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+
+                        <i class="fa fa-address-book"></i>Need to find a Specialist
+
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                <a href="https://www.google.com/">Benefits</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                            <p>
+                                <a href="https://www.google.com/">Health</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-info"></i> Additional Questions</div>
+            <div class="card-body">
+                <h3>Select Section</h3>
+                <div class="accordion accordion-3 z-depth-1-half" id="accordionEx1" role="tablist" aria-multiselectable="true">
+
+
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-headers" role="tab" id="heading4">
+                            <a data-toggle="collapse" data-parent="#accordionEx1" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                        </div>
+                        <h3 class="mb-0 mt-3 red-text"> Front Office
+
+                            <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                        </h3>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse4" class="collapse show" role="tabpanel" aria-labelledby="heading4" data-parent="#accordionEx1">
+                        <div class="card-body pt-0">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Age</th>
+                                </tr>
+                                <tr>
+                                    <td>Jill</td>
+                                    <td>Smith</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Eve</td>
+                                    <td>Jackson</td>
+                                    <td>94</td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>80</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion card -->
+
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-headers" role="tab">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            <h3 class="mb-0 mt-3 red-text">
+                                Diversity Inclusion
+                                <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5" data-parent="#accordionEx1">
+                        <div class="card-body pt-0">
+                            <p>As is.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-headers" role="tab">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                <h3 class="mb-0 mt-3 red-text">
+                                    Diversity inclusion
+                                    <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                                </h3>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx1">
+                            <div class="card-body pt-0">
+                                <p>sup
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion card -->
+                </div>
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-headers" role="tab">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            <h3 class="mb-0 mt-3 red-text">
+                                EMPLOYEE DEVELOPMENT
+                                <i class="fa fa-angle-down rotate-icon fa-2x"></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse6" class="collapse" role="tabpanel" aria-labelledby="heading6" data-parent="#accordionEx1">
+                        <div class="card-body pt-0">
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                                heard of them accusamus labore sustainable VHS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion card -->
+
+            <!-- Accordion card -->
+
+            <!-- Accordion card -->
+        </div>
+
+        <!--/.Accordion wrapper-->
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-3">s</div>
+    </div>
+
+    </div>
+    </div>
+
+
+
 </body>
-aa
+</div>
 
 
+
+</div>
+</div>
+</div>
+
+</div>
 
 </html>
